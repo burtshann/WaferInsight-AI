@@ -1,0 +1,37 @@
+{
+  "dataset": "synthetic",
+  "rows": 1000000,
+  "sha256": "18c3fbf29bb9719e8ef86bc131992fd38832508a1d5f261286ef3392b62f3c01",
+  "seconds": {
+    "polars": [
+      0.02089370001340285,
+      0.03470329998526722,
+      0.01991890004137531,
+      0.07613499998115003,
+      0.05857490003108978
+    ],
+    "pandas": [
+      0.31285240000579506,
+      0.2960900000180118,
+      0.3088763999985531,
+      0.8751278999843635,
+      0.9102749000303447
+    ]
+  },
+  "median_seconds": {
+    "polars": 0.03470329998526722,
+    "pandas": 0.31285240000579506
+  },
+  "polars_rows_per_second": 28815703.41796127,
+  "speedup_vs_pandas": 9.015061972164375,
+  "equivalence_check": "passed",
+  "environment": {
+    "python": "3.13.5",
+    "os": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "polars": "1.44.1",
+    "pandas": "2.2.3",
+    "polars_threads": 16
+  },
+  "method": "warm cache; one warmup per engine; alternating order; CSV read + filter + aggregate + sort; validation excluded"
+}

@@ -67,7 +67,7 @@ See [raw benchmark results](reports/benchmark.json) for actual measurements, env
 
 | Claim | Evidence / status |
 | :--- | :--- |
-| Polars vs Pandas throughput | Locally measured; see raw report |
+| Polars vs Pandas throughput | 28.82M rows/s; 9.02× median ratio on 1M synthetic rows, local warm-cache run |
 | WM-811K accuracy / macro-F1 | Not measured; requires dataset and training |
 | AOI mAP / segmentation IoU | Not applicable to this wafer-map implementation |
 | GPU / edge inference latency | Not measured |
@@ -131,4 +131,3 @@ Code is distributed under the [MIT License](LICENSE). Synthetic examples are gen
 ---
 
 **中文说明：** 本项目用于展示半导体晶圆图数据工程、空间失效分析和模型训练能力。演示数据明确标注为合成数据；真实 WM-811K 准确率需要取得数据并完成训练后才能填写。项目未宣称通过工业生产验证，也未把晶圆测试图上的失效簇冒充为显微 AOI 检测结果。
-
