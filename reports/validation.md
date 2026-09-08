@@ -9,6 +9,8 @@ Date: 2026-09-07. Windows 11; Python 3.13.5; Polars 1.44.1; Pandas 2.2.3; NumPy 
 - Inspection PNG generated with the actual plotting code and visually inspected.
 - One-epoch end-to-end ViT smoke run on 54 synthetic maps across six synthetic lots completed, including checkpoint reload and held-out evaluation JSON. This verifies execution only; its scores are not WM-811K performance evidence.
 - Local combined tests initially aborted with the host Anaconda numeric libraries and PyTorch in one process. A workspace virtual environment with a PyPI NumPy wheel resolved the issue; no unsafe OpenMP override was used.
-- Docker build, Linux CI execution, real WM-811K training, deployment and GPU inference were not validated locally.
+- Update: real WM-811K source auditing, subset classification and ETL testing are now complete; see [public study](wm811k/README.md). GPU training ran on RTX 4050 with PyTorch 2.5.1/CUDA 11.8 in a separate Python 3.11 environment. The initial CPU-only installation was not evidence of absent GPU hardware.
+- Updated test suite: **12 passed in 7.14 seconds**, including public-data deduplication, conflicting-label exclusion and partition checks. The CUDA training/evaluation workflow also completed successfully on actual public data.
+- Docker build, Linux CI execution, production deployment and isolated inference-latency benchmarking have not been verified locally.
 
 Use an isolated virtual environment and the supplied requirements to reproduce. Real-data results must be accompanied by the dataset version, split manifest, checkpoint and hardware details.

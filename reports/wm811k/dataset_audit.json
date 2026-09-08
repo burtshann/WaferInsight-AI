@@ -1,0 +1,73 @@
+{
+  "dataset": "WM-811K",
+  "source": "https://www.kaggle.com/datasets/qingyi/wm811k-wafer-map",
+  "version": 1,
+  "license_as_listed": "CC0: Public Domain",
+  "source_file_sha256": "1d04fccb3dd3176b276878b926b20fead7e077c5751e4d353ea9741a5e7b5c65",
+  "raw_wafers": 811457,
+  "raw_lots": 46293,
+  "label_counts": {
+    "none": 147431,
+    "Loc": 3593,
+    "": 638507,
+    "Edge-Loc": 5189,
+    "Center": 4294,
+    "Edge-Ring": 9680,
+    "Scratch": 1193,
+    "Random": 866,
+    "Near-full": 149,
+    "Donut": 555
+  },
+  "labeled_wafers": 172950,
+  "conflicting_duplicate_rows_removed": 28,
+  "duplicate_or_conflicting_rows_removed": 3266,
+  "unique_labeled_wafers": 169684,
+  "selected_wafers": 4086,
+  "seed": 42,
+  "train_cap_per_class": 300,
+  "eval_cap_per_class": 100,
+  "split_class_counts": {
+    "test": {
+      "Loc": 100,
+      "none": 100,
+      "Random": 100,
+      "Scratch": 100,
+      "Edge-Loc": 100,
+      "Donut": 53,
+      "Edge-Ring": 100,
+      "Center": 100,
+      "Near-full": 21
+    },
+    "train": {
+      "Center": 300,
+      "none": 300,
+      "Random": 300,
+      "Near-full": 103,
+      "Edge-Loc": 300,
+      "Scratch": 300,
+      "Loc": 300,
+      "Donut": 300,
+      "Edge-Ring": 300
+    },
+    "validation": {
+      "Loc": 100,
+      "Random": 100,
+      "none": 100,
+      "Edge-Loc": 100,
+      "Scratch": 100,
+      "Edge-Ring": 100,
+      "Donut": 92,
+      "Center": 100,
+      "Near-full": 17
+    }
+  },
+  "split_lots": {
+    "test": 526,
+    "train": 1852,
+    "validation": 551
+  },
+  "etl_wafers": 1000,
+  "etl_die_records": 1864924,
+  "protocol": "Remove exact-map duplicates and conflicting labels before seed-42 lot split (~70/15/15); class-cap sampling inside each split. Not the official WM-811K split; subset class priors are altered.",
+  "split_manifest_sha256": "ed6a6dfb8758645c5a36663d1d2f705f3e84698d70be7953004350218b4e860d"
+}

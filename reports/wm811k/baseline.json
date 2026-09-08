@@ -1,0 +1,132 @@
+{
+  "model": "RandomForest (200 trees, 87 spatial density features)",
+  "classes": [
+    "none",
+    "Center",
+    "Donut",
+    "Edge-Loc",
+    "Edge-Ring",
+    "Loc",
+    "Random",
+    "Scratch",
+    "Near-full"
+  ],
+  "accuracy": 0.7351421188630491,
+  "macro_f1_all_9_classes": 0.7567409660414537,
+  "confusion_matrix": [
+    [
+      67,
+      0,
+      0,
+      9,
+      0,
+      5,
+      0,
+      19,
+      0
+    ],
+    [
+      7,
+      90,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      49,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0
+    ],
+    [
+      10,
+      1,
+      2,
+      73,
+      1,
+      6,
+      2,
+      5,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      2,
+      94,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      14,
+      2,
+      12,
+      9,
+      0,
+      35,
+      3,
+      25,
+      0
+    ],
+    [
+      0,
+      3,
+      3,
+      0,
+      0,
+      1,
+      93,
+      0,
+      0
+    ],
+    [
+      23,
+      2,
+      0,
+      12,
+      0,
+      14,
+      1,
+      48,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      20
+    ]
+  ],
+  "support": [
+    100,
+    100,
+    53,
+    100,
+    100,
+    100,
+    100,
+    100,
+    21
+  ],
+  "train_majority_baseline_accuracy": 0.12919896640826872,
+  "fit_and_test_seconds": 1.2772146000061184,
+  "seed": 42,
+  "note": "Same predefined split as ViT; no test-driven tuning."
+}

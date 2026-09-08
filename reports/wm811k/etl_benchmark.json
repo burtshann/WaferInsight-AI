@@ -1,0 +1,37 @@
+{
+  "dataset": "WM811K",
+  "rows": 1864924,
+  "sha256": "b9010274da0499f74a5c0dbe679d9282e4ebe4d42f4186d2460ebc71fabf775b",
+  "seconds": {
+    "polars": [
+      0.051409399951808155,
+      0.06485199998132885,
+      0.061226600024383515,
+      0.06970759999239817,
+      0.06460969999898225
+    ],
+    "pandas": [
+      0.7372401000466198,
+      1.0468278000480495,
+      0.8545582999940962,
+      0.9597837999463081,
+      0.8450699999812059
+    ]
+  },
+  "median_seconds": {
+    "polars": 0.06460969999898225,
+    "pandas": 0.8545582999940962
+  },
+  "polars_rows_per_second": 28864458.4331668,
+  "speedup_vs_pandas": 13.226470638426697,
+  "equivalence_check": "passed",
+  "environment": {
+    "python": "3.13.5",
+    "os": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "polars": "1.44.1",
+    "pandas": "2.2.3",
+    "polars_threads": 16
+  },
+  "method": "warm cache; one warmup per engine; alternating order; CSV read + filter + aggregate + sort; validation excluded"
+}

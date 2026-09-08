@@ -1,0 +1,2 @@
+# Preserve the exact bytes covered by the published split-manifest SHA-256.
+reports/wm811k/split_manifest.csv -text
