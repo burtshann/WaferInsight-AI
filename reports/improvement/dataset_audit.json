@@ -1,0 +1,61 @@
+{
+  "source_sha256": "1d04fccb3dd3176b276878b926b20fead7e077c5751e4d353ea9741a5e7b5c65",
+  "seed": 20260909,
+  "split_counts": {
+    "fresh_audit": 1082,
+    "historical_test": 774,
+    "train": 13933,
+    "validation": 809
+  },
+  "class_counts": {
+    "fresh_audit": {
+      "none": 200,
+      "Edge-Loc": 200,
+      "Center": 200,
+      "Edge-Ring": 200,
+      "Loc": 200,
+      "Scratch": 71,
+      "Random": 11
+    },
+    "historical_test": {
+      "Loc": 100,
+      "none": 100,
+      "Random": 100,
+      "Scratch": 100,
+      "Edge-Loc": 100,
+      "Edge-Ring": 100,
+      "Center": 100,
+      "Donut": 53,
+      "Near-full": 21
+    },
+    "train": {
+      "none": 4000,
+      "Loc": 2000,
+      "Edge-Loc": 2000,
+      "Center": 2000,
+      "Edge-Ring": 2000,
+      "Scratch": 818,
+      "Random": 602,
+      "Donut": 410,
+      "Near-full": 103
+    },
+    "validation": {
+      "Loc": 100,
+      "Random": 100,
+      "none": 100,
+      "Edge-Loc": 100,
+      "Scratch": 100,
+      "Edge-Ring": 100,
+      "Center": 100,
+      "Donut": 92,
+      "Near-full": 17
+    }
+  },
+  "fresh_missing_classes": [
+    "Donut",
+    "Near-full"
+  ],
+  "manifest_sha256": "372f9b755a6a723e077694162a0f283c352ad9b2ff407d0675f89b1e49261338",
+  "cache_sha256": "eafc955b7d321f4c4891e1795a70bd74af0f0fe32b8613b9ea4698368431f036",
+  "protocol": "Expanded original training lots (none cap4000, others cap2000). Original validation809 unchanged. Old test774 historical only. Fresh audit: unused lots in original full test partition, cap200/class; excluded ALL previously selected lots. Exact-content deduplicated. Class caps change priors."
+}

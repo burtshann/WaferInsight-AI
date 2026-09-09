@@ -1,0 +1,6 @@
+{
+  "architecture": "hybrid",
+  "checkpoint_sha256": "eb28fcdf71c04f06078ffd014478af5206ef18c1e38f907b56a5577979bd5d52",
+  "validation_macro_f1": 0.9330109357833862,
+  "selection_criterion": "validation macro-F1 only"
+}

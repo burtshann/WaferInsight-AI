@@ -1,0 +1,9 @@
+{
+  "method": "paired lot-cluster percentile bootstrap,2000 resamples,seed42",
+  "lots": 667,
+  "accuracy_gain": 0.3391866913123845,
+  "accuracy_gain_95pct_interval": [
+    0.29999785775492716,
+    0.38078278485854633
+  ]
+}

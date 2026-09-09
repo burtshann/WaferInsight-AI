@@ -38,7 +38,22 @@ try:
             st.warning('Yield below threshold — engineering review required.')
         else:
             st.success('Yield meets the selected threshold.')
-        st.caption('Connected-component boxes describe failed-die groups. No AOI segmentation, chamber attribution or trained-model predictions are claimed.')
+        st.caption('Connected-component boxes describe failed-die groups. Pattern classification below is optional; AOI segmentation and chamber attribution are not implemented.')
+        if st.checkbox('Run trained wafer-pattern classifier',value=False):
+            try:
+                from waferinsight.predict import load_inspector,inspect_map
+                @st.cache_resource
+                def trained_inspector():
+                    return load_inspector()
+                model,card=trained_inspector()
+                prediction=inspect_map(a,model)
+                st.write('Predicted pattern:',prediction['pattern'])
+                st.caption(f"Model score: {prediction['score']:.3f} (uncalibrated). Research model; engineering review required.")
+                if not upload:st.caption('This input is synthetic and outside the real-data evaluation protocol.')
+            except (ImportError,FileNotFoundError) as exc:
+                st.info('Install requirements-ml.txt and ensure the verified model files are available in models/.')
+            except ValueError as exc:
+                st.error(str(exc))
         st.download_button('Export die records', records.write_csv(), 'die_records.csv', 'text/csv')
         st.download_button('Export inspection report', json.dumps({'source': upload.name if upload else 'synthetic',
             'metrics': metrics, 'clusters': clusters(a)}, indent=2), 'inspection.json', 'application/json')

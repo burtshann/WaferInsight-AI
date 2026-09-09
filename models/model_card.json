@@ -1,0 +1,23 @@
+{
+  "architecture": "hybrid",
+  "checkpoint_sha256": "eb28fcdf71c04f06078ffd014478af5206ef18c1e38f907b56a5577979bd5d52",
+  "validation_macro_f1": 0.9330109357833862,
+  "selection_criterion": "validation macro-F1 only",
+  "classes": [
+    "none",
+    "Center",
+    "Donut",
+    "Edge-Loc",
+    "Edge-Ring",
+    "Loc",
+    "Random",
+    "Scratch",
+    "Near-full"
+  ],
+  "input": "2D categorical wafer map: 0 outside,1 pass,2 fail; nearest-neighbour 64x64 one-hot encoding",
+  "training_dataset": "WM-811K; 13,933 maps from original training lots",
+  "weights": "state_dict; load with weights_only=True",
+  "limitations": "Research classification only. Uncalibrated scores. Fresh audit has no Donut or Near-full. Not production-qualified.",
+  "license": "MIT for model/code; source dataset listing CC0; see report for provenance",
+  "report": "../reports/improvement/README.md"
+}

@@ -14,3 +14,11 @@ Date: 2026-09-07. Windows 11; Python 3.13.5; Polars 1.44.1; Pandas 2.2.3; NumPy 
 - Docker build, Linux CI execution, production deployment and isolated inference-latency benchmarking have not been verified locally.
 
 Use an isolated virtual environment and the supplied requirements to reproduce. Real-data results must be accompanied by the dataset version, split manifest, checkpoint and hardware details.
+
+## Improvement validation — 2026-09-09
+
+- Expanded-data CNN and hybrid training each completed 30 epochs on RTX 4050. Candidate selection used validation only; a separate evaluation command saved selection before audit inference.
+- **18 tests passed in 15.42 seconds**, including both encoder gradients, category-preserving augmentation, absent-class metrics, checksum rejection and trained-classifier UI.
+- Packaged CPU inference on an original-size historical map matched its recorded GPU prediction. Weights are shipped with a verified SHA-256/model card.
+- Training curves and confusion matrices were rendered and visually inspected. Full numerical evidence is in [the improvement study](improvement/README.md).
+- The earlier Linux workflow passed after the Streamlit absolute-path test fix. The new workflow result is available in GitHub Actions; local tests above are separately recorded.
